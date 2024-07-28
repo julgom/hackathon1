@@ -1,5 +1,13 @@
 import streamlit.components.v1 as components
 
+import google.generativeai as genai
+import os
+import PyPDF2 as pdf
+import fitz  # PyMuPDF
+import json
+from dotenv import load_dotenv
+
+
 # Define your Google Analytics tag
 google_analytics_tag = """
 <!-- Google tag (gtag.js) -->
@@ -16,12 +24,6 @@ google_analytics_tag = """
 # Inject the Google Analytics tag into the Streamlit app
 components.html(google_analytics_tag, height=0, width=0)
 
-import google.generativeai as genai
-import os
-import PyPDF2 as pdf
-import fitz  # PyMuPDF
-import json
-from dotenv import load_dotenv
 
 load_dotenv()
 
