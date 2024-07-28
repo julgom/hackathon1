@@ -6,24 +6,6 @@ import fitz  # PyMuPDF
 import json
 from dotenv import load_dotenv
 
-st.set_page_config(page_title="Resume Coach")
-
-def add_analytics_tag():
-    analytics_js = """
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSZKX1MP02"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-XSZKX1MP02');
-    </script>
-    """
-    st.markdown(analytics_js, unsafe_allow_html=True)
-
-# Call the function to add Google Analytics tag
-add_analytics_tag()
 
 load_dotenv()
 
@@ -46,7 +28,7 @@ def input_pdf_text(uploaded_file):
 
 ## streamlit app
 
-##st.set_page_config(page_title="Resume Coach")
+st.set_page_config(page_title="Resume Coach")
 st.header("Resume Coach")
 st.write("Upload your resume and enter your email for a review.")
 
