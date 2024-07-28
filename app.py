@@ -1,4 +1,4 @@
-import streamlit.components.v1 as st
+import streamlit as st
 
 import google.generativeai as genai
 import os
