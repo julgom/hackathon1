@@ -6,6 +6,8 @@ import fitz  # PyMuPDF
 import json
 from dotenv import load_dotenv
 
+st.set_page_config(page_title="Resume Coach")
+
 def add_analytics_tag():
     analytics_js = """
     <!-- Google tag (gtag.js) -->
@@ -44,7 +46,7 @@ def input_pdf_text(uploaded_file):
 
 ## streamlit app
 
-st.set_page_config(page_title="Resume Coach")
+##st.set_page_config(page_title="Resume Coach")
 st.header("Resume Coach")
 st.write("Upload your resume and enter your email for a review.")
 
