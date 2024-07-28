@@ -47,9 +47,11 @@ submit1 = st.button("Tell Me About the Resume")
 submit2 = st.button("Percentage match")
 
 input_prompt1 = """
-  You are a resume reviewer. Provide specific insight based on the STAR method, structure, length, and professional 
- experience. You are very critical about each resume the avearge score of a resume would be 5.5 out of 10 on your scale.
-  Lean more on telling clients what they can change over what they got right. Here is a resume to review:
+ 
+  You are an experienced Technical Human Resource Manager,your task is to review the provided resume against the job description. 
+  Please share your professional evaluation on whether the candidate's profile aligns with the job description role. 
+ Highlight the strengths and weaknesses of the applicant in relation to the specified job requirements.
+
 """
 
 input_prompt2 = """
