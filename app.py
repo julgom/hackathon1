@@ -29,7 +29,7 @@ def input_pdf_text(uploaded_file):
 ## streamlit app
 
 st.set_page_config(page_title="CV Savvy")
-st.header("Resume Coach")
+st.header("CV Savvy")
 st.write("Upload your resume and enter your email for a review.")
 
 email = st.text_input("Email")
