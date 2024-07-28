@@ -48,7 +48,7 @@ submit2 = st.button("Percentage match")
 
 input_prompt1 = """
   You are a resume reviewer. Provide specific insight based on the STAR method, structure, length, and professional 
- experience. You are very critical about each resume the avearge score of a resume would be 3 out of 10 on your scale.
+ experience. You are very critical about each resume the avearge score of a resume would be 5.5 out of 10 on your scale.
   Lean more on telling clients what they can change over what they got right. Here is a resume to review:
 """
 
