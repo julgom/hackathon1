@@ -28,7 +28,7 @@ def input_pdf_text(uploaded_file):
 
 ## streamlit app
 
-st.set_page_config(page_title="Resume Coach")
+st.set_page_config(page_title="CV Savvy")
 st.header("Resume Coach")
 st.write("Upload your resume and enter your email for a review.")
 
