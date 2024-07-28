@@ -18,21 +18,12 @@ def get_gemini_response(input):
     return response.text
 
 
-#def input_pdf_text(uploaded_file):
-#    reader=pdf.PdfReader(uploaded_file)
-#    text=""
-#    for page in range(len(reader.pages)):
-#        page=reader.pages[page]
-#        text+=str(page.extract_text())
-#    return text
-
-def input_pdf_text(file_path):
-    with open(file_path, "rb") as f:
-        reader = pdf.PdfReader(f)
-        text = ""
-        for page in range(len(reader.pages)):
-            page = reader.pages[page]
-            text += page.extract_text()
+def input_pdf_text(uploaded_file):
+    reader=pdf.PdfReader(uploaded_file)
+    text=""
+    for page in range(len(reader.pages)):
+        page=reader.pages[page]
+        text+=str(page.extract_text())
     return text
 
 
@@ -67,36 +58,16 @@ Question Answering: Respond to specific queries from users regarding resume writ
 handle employment gaps, career changes, or lack of experience. Here is a resume to reveiw below:
 """
 
-#if submit:
-#    if uploaded_file and email:
-#        pdf_content=input_pdf_text(uploaded_file)
-#        response=get_gemini_response(input_prompt + " " + pdf_content)
-#        st.subheader("The Response is")
-#        st.write(response)
-#    elif uploaded_file and not email:
-#       st.write("Please enter the email")
-#    elif not uploaded_file and email:
-#       st.write("Please upload the resume")
-#    else:
-#       st.write("Please enter all details")
-
 if submit:
     if uploaded_file and email:
-        # Save the uploaded file temporarily
-        with open("uploaded_resume.pdf", "wb") as f:
-            f.write(uploaded_file.getbuffer())
-        
-        # Extract text from the saved PDF
-        pdf_content = input_pdf_text("uploaded_resume.pdf")
-        
-        # Get the response from the Gemini API
-        response = get_gemini_response(input_prompt + " " + pdf_content)
-        
+        pdf_content=input_pdf_text(uploaded_file)
+        response=get_gemini_response(input_prompt + " " + pdf_content)
         st.subheader("The Response is")
         st.write(response)
     elif uploaded_file and not email:
-        st.write("Please enter the email")
+       st.write("Please enter the email")
     elif not uploaded_file and email:
-        st.write("Please upload the resume")
+       st.write("Please upload the resume")
     else:
-        st.write("Please enter all details")
+       st.write("Please enter all details")
+
