@@ -8,21 +8,6 @@ import json
 from dotenv import load_dotenv
 
 
-# Define your Google Analytics tag
-google_analytics_tag = """
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSZKX1MP02"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XSZKX1MP02');
-</script>
-"""
-
-# Inject the Google Analytics tag into the Streamlit app
-components.html(google_analytics_tag, height=0, width=0)
 
 
 load_dotenv()
