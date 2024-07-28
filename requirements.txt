@@ -3,5 +3,3 @@ PyPDF2
 google.generativeai
 python-dotenv
 PyMuPDF
-streamlit
-beautifulsoup4
