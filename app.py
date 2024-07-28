@@ -30,7 +30,7 @@ def input_pdf_text(uploaded_file):
 
 st.set_page_config(page_title="CV Savvy")
 st.header("CV Savvy")
-st.write("Upload your resume and enter your email for a review.")
+st.write("Enter your email, job description and upload your resumefor a review.")
 
 email = st.text_input("Email")
 
