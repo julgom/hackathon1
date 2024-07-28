@@ -43,6 +43,8 @@ google_tag_script = """
   gtag('js', new Date());
 
   gtag('config', 'G-XSZKX1MP02');
+
+  console.log("Google Tag Manager Loaded");
 </script>
 """
 st.components.v1.html(google_tag_script, height=0)
