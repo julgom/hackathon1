@@ -1,5 +1,5 @@
 streamlit
 PyPDF2
 google.generativeai
-PyMuPDF
 python-dotenv
+PyMuPDF
