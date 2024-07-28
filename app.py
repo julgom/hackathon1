@@ -33,6 +33,20 @@ st.set_page_config(page_title="Resume Coach")
 st.header("Resume Coach")
 st.write("Upload your resume and enter your email for a review.")
 
+# Inject Google Tag Manager script
+google_tag_script = """
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSZKX1MP02"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XSZKX1MP02');
+</script>
+"""
+st.components.v1.html(google_tag_script, height=0)
+
 email = st.text_input("Email")
 uploaded_file=st.file_uploader("Choose a file(PDF)",type=["pdf"])
 
